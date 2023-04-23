@@ -1,0 +1,62 @@
+<template>
+  <div class="screen">
+    <h1>✨ Congratulations ✨</h1>
+    <h3>{{ Math.round(timer / 1000) }} seconds.</h3>
+    <button @click="$emit('onStartAgain')">Start Again</button>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    timer: {
+      type: Number,
+      required: true,
+    },
+  },
+};
+</script>
+
+<style lang="scss" scoped>
+@import "../assets/style/globall.scss";
+
+.screen {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: $dark-color;
+  color: $light-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  h1 {
+    font-size: 5rem;
+  }
+  h3 {
+    margin-top: 1.5rem;
+    font-size: 3rem;
+  }
+  button {
+    font: $font;
+    background: transparent;
+    box-shadow: none;
+    border: 1px solid $light-color;
+    color: $light-color;
+    margin: 1rem;
+    padding: 1rem 1.25rem;
+    border-radius: 0.5rem;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+
+    &:hover {
+      background-color: $light-color;
+      color: $dark-color;
+    }
+  }
+}
+</style>

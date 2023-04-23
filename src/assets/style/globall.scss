@@ -1,0 +1,17 @@
+$base-color: #c6538c;
+$border-dark: rgba($base-color, 0.88);
+$dark-color: #212121;
+$light-color: #f3f3f3;
+$font: 'Odibee Sans', cursive;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font;
+    font-size: 16px;
+    width: 100%;
+}
